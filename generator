@@ -1,30 +1,5 @@
 import random
 
-# class PasswordGenerator:
-#     def __init__(self, pwL, s, u, l, i):
-#         self.attr[0] = pwL
-#         self.attr[1] = s
-#         self.attr[2] = u
-#         self.attr[3] = l
-#         self.attr[4] = i
-
-#     def generate(self):        
-#         pw_list = []
-#         x = 10
-#         for i in range(x):
-#             rn = random.randint(33, 126)
-#             pw_list.append(chr(rn))
-#             ++i
-
-#         password = ""
-#         for i in pw_list:
-#             password += i
-
-#         print("Your password is " + password)
-    
-    # def verify(self):
-    #     if()
-
 def selectIndex(pwList, nonEditable):
     i = random.randint(0, len(pwList)-1)
     while (i in nonEditable):
@@ -105,39 +80,21 @@ def generate(attr): # attr = [pwLen, special, uppercase, lowercase, number]
             attr[i] = False
         else:
             attr[i] = True
-
-    print(attr)
     pwList = verify(pwList, attr)
-
     password = ""
     for i in pwList:
         password += chr(i)
     return password
 
-# stopMessage = "To end the program type STOP: "
-# attr = [0, 'O', 'O', 'O', 'O'] # attr = [pwLen, special, uppercase, lowercase, number]
-# while (attr[0] < 4 or attr[0] > 20):
-#     attr[0] = int(input("Password Length (input an integer from 4-20): "))
-# while (attr[1] != 'T' and attr[1] != 'F'):
-#     attr[1] = input("Inlcude Special Character (T/F): ")
-# while (attr[2] != 'T' and attr[2] != 'F'):
-#     attr[2] = input("Inlcude uppercase (T/F): ")
-# while (attr[3] != 'T' and attr[3] != 'F'):
-#     attr[3]= input("Inlcude lowercase (T/F): ")
-# while (attr[4] != 'T' and attr[4] != 'F'):
-#     attr[4] = input("Inlcude a number (T/F): ")  
-attr = [17, 'T', 'T', 'T', 'T']
+attr = [0, 'O', 'O', 'O', 'O'] # attr = [pwLen, special, uppercase, lowercase, number]
+while (attr[0] < 4 or attr[0] > 20):
+    attr[0] = int(input("Password Length (input an integer from 4-20): "))
+while (attr[1] != 'T' and attr[1] != 'F'):
+    attr[1] = input("Inlcude Special Character (T/F): ")
+while (attr[2] != 'T' and attr[2] != 'F'):
+    attr[2] = input("Inlcude uppercase (T/F): ")
+while (attr[3] != 'T' and attr[3] != 'F'):
+    attr[3]= input("Inlcude lowercase (T/F): ")
+while (attr[4] != 'T' and attr[4] != 'F'):
+    attr[4] = input("Inlcude a number (T/F): ")  
 print("Your password is " + generate(attr))
-
-#     pwLen = 0
-#     special = False
-#     uppercase = False
-#     lowercase = False
-#     def generate_password(pwL, s, u, l){
-#         return 0
-#     }
-# myPassword = Password()
-
-# pw_attributes = []
-# pw_len = input ("Password length (Enter a digit between 4-20): ")
-# while ( >)
